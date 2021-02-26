@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main () {
+    //Declarar variáveis
+    //vl = valor,
+    //rj = reajuste
+    //porc = valor reajustado
+    float vl, rj, porc;
+
+    //Entrada
+    printf("Digite o preco: ");
+    scanf("%f", &vl);
+    printf("Digite o reajuste em porcentagem: ");
+    scanf("%f", &rj);
+
+    //processamento
+    porc = ((vl * rj) / 100) + vl;
+
+
+    //Saída
+    printf("O valor reajustado: %0.2f", porc);
+return 0;
+}
