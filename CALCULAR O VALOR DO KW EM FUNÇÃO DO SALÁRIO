@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <locale.h>
+
+int main (void) {
+    //Declarar variáveis
+    //sal: salário mínimo
+    //kwres: quilowatts gastos pela residência
+    //vkw: valor de 1 quilowatt
+    //vpg: valor a pagar
+    //vcd: valor com desconto
+
+    float sal, kwres, vkw, vpg, vcd;
+    setlocale(LC_ALL, "Portuguese_Brazil");
+
+    //entrada
+    printf("Informe o valor do salário mínimo: ");
+    scanf("%f", &sal);
+    printf("informe a quantidade de quilowatts gastos pela residência: ");
+    scanf("%f", &kwres);
+
+    //Processamento
+    vkw = (sal/7)/100;
+    vpg = vkw * kwres;
+    vcd= vpg - ((vpg *10)/100) ;
+
+    //saída
+    printf("O valor do quilowat é: %.2f\n", vkw);
+    printf("O valor a ser pago é: %.2f\n", vpg);
+    printf("O valor a ser pago com desconto é: %.2f\n", vcd);
