@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <locale.h>
+#include <math.h>
+
+//PROGRAMA PARA CALCULAR O NÚMERO DE INGRESSO QUE DEVEM SER VENDIDOS PARA COBRIR OS CUSTOS DE UM EVENTO
+int main (void) {
+
+setlocale(LC_ALL, "Portuguese_Brazil");
+
+//Declarar variáveis
+/*cusde: custo do espetáculo
+vali: valor do ingresso
+cob: cobrir custo do espetáculo
+cobluc: cobrir custo do espetáculo + lucro 20%*/
+float cusde, vali, cob, cobluc;
+
+//Entrada
+    printf("Informe o valor de custo do espetáculo: ");
+    scanf("%f", &cusde);
+    printf("\nInforme o valor do ingresso: ");
+    scanf("%f", &vali);
+
+//Processamento
+    cob = ceil(cusde / vali);
+    cobluc = ceil (((cusde * 25)/100) + cusde) / vali;
+
+
+//Saída
+printf("\nPara cobrir o custo do espetáculo é necessário vender %.0f ingressos \n", cob);
+printf("\nPara cobrir o custo do espetáculo e ter 25 por cento de lucro é necessário vender %.0f ingressos \n", cobluc);
+
+
+return 0;
+}
