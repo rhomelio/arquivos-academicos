@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <locale.h>
+
+//PROGRAMA PARA CALCULAR VALOR DO SALÁRIO DE UM FUNCIONARIO EM FUNÇÃO DO SALÁRIO + COMISSÃO + 5% DO VALOR TOTAL DAS VENDAS
+int main (void){
+setlocale(LC_ALL, "Portuguese_Brazil");
+
+    //Declarar variáveis
+    /*salf: salário fixo
+    com: comissão
+    ncv: número de carros vendidos
+    vtv: valor total de vendas
+    salm: salário mensal*/
+    float salf, com, ncv, vtv, salm;
+
+    //Entrada
+    printf("Informe o número de carros vendidos: ");
+    scanf("%f", &ncv);
+    printf("Informe o valor total das vendas realizadas: ");
+    scanf("%f", &vtv);
+    printf("Informe o valor do salário fixo: ");
+    scanf("%f", &salf);
+    printf("Informe o valor da comissão recebida por carro vendido: ");
+    scanf("%f", &com);
+
+    //Processaento
+    salm = ((((vtv*5)/100) + (ncv * com) + salf));
+
+
+    //Saída
+    printf("O salário líquido é: %.2f", salm);
+
+
+
+
+
+return 0;
+}
