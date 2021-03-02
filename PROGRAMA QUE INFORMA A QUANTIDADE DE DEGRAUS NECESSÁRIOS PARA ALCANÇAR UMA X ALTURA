@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <locale.h>
+#include <math.h>
+//PROGRAMA QUE INFORMA A QUANTIDADE DE DEGRAUS NECESSÁRIOS PARA ALCANÇAR UMA X ALTURA
+//ALUNO: RHOMÉLIO ANDERSON SOUSA ALBUQUERQUE - 1º SEMESTRE ENGENHARIA DA COMPUTAÇÃO - TURMA 2020.2 B
+
+int main (void){
+    setlocale(LC_ALL, "Portuguese_Brazil");
+    float deg, alt, tot;
+
+    //Entrada
+    printf("Digite a altura de cada degrau em centímetros: ");
+    scanf("%f", &deg);
+    printf("Digite a altura desejada em metros: ");
+    scanf("%f", &alt);
+
+
+    //Processamento
+    tot = ceil((alt * 100) / deg);
+
+
+    //Saída
+    printf("Para alcançar a altura desejada, é necessário subir %.0f degraus", tot);
+
+
+
+
+
+
+
+return 0;
+}
