@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <locale.h>
+//PROGRAMA QUE CONVERTE OS SEGUNDOS EM MINUTOS, HORAS E DIAS
+//ALUNO: RHOMÉLIO ANDERSON SOUSA ALBUQUERQUE - 1º SEMESTRE ENGENHARIA DA COMPUTAÇÃO - TURMA 2020.2 B
+
+int main (void){
+    
+    //Declarar variáveis
+    int seg;
+    float min, hrs, dias;
+    setlocale(LC_ALL, "Portuguese_Brazil");
+
+    
+    //Entrada
+    printf("Informe o tempo em segundos: ");
+    scanf("%d", &seg);
+
+    
+    //Processamento
+    min = (seg / 60);
+    hrs = (min /60);
+    dias = (hrs / 24);
+
+
+    //Saída
+    printf("\n O tempo em minutos é: %.1f", min);
+    printf("\n O tempo em horas é: %.1f", hrs);
+    printf("\n O tempo em dias é: %.1f", dias);
+
+
+return 0;
+}
